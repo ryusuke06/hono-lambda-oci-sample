@@ -1,0 +1,17 @@
+# Paketo Cloud Native Buildpacks descriptor.
+# Read by `pack build` and lifecycle creator when this directory is the source.
+# https://buildpacks.io/docs/reference/config/project-descriptor/
+
+[_]
+schema-version = "0.2"
+
+[io.buildpacks]
+builder = "paketobuildpacks/builder-jammy-base"
+
+[[build.env]]
+name = "BP_NODE_VERSION"
+value = "22"
+
+[[build.env]]
+name = "BP_NODE_RUN_SCRIPTS"
+value = "build"
